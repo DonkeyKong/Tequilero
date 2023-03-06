@@ -1,0 +1,18 @@
+[Unit]
+Description=Map Controller Kiosk
+Wants=graphical.target
+After=graphical.target
+
+[Service]
+Environment=DISPLAY=:0.0
+Environment=XAUTHORITY=/home/pi/.Xauthority
+ExecStartPre=/bin/sleep 15
+ExecStart=/home/pi/Documents/build-MantleMapController-Desktop-Debug/MantleMapController
+Type=idle
+Restart=always
+RestartSec=1
+StartLimitIntervalSec=0
+User=root
+
+[Install]
+WantedBy=graphical.target

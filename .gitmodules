@@ -1,0 +1,3 @@
+[submodule "deps/gpio-cpp"]
+	path = deps/gpio-cpp
+	url = https://github.com/DonkeyKong/gpio-cpp.git
