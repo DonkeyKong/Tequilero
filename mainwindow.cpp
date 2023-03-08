@@ -4,9 +4,9 @@
 #include <fstream>
 #include <algorithm>
 
-static const int Pump1Line = 17;
+static const int Pump1Line = 26;
 static const int Pump2Line = 27;
-static const int Pump3Line = 26;
+static const int Pump3Line = 17;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow),
@@ -36,13 +36,29 @@ MainWindow::Pump::Pump(Gpio& gpioDev, int gpioLine, QPushButton* startButton, QP
   offPending(false),
   flowRate(flowRate)
 {
-  gpio.setupLine(line, Gpio::LineMode::Output, Gpio::LineBias::PullDown);
+  gpio.setupLine(line, Gpio::LineMode::Output);
   stop();
 }
 
 MainWindow::Pump::~Pump()
 {
-  gpio.releaseLine(line);
+  if (line > 0)
+  {
+    gpio.releaseLine(line);
+  }
+}
+
+MainWindow::Pump::Pump(Pump&& other):
+  gpio(other.gpio),
+  line(other.line),
+  startButton(other.startButton),
+  stopButton(other.stopButton),
+  state(other.state),
+  offPending(other.offPending),
+  flowRate(other.flowRate),
+  offTime(other.offTime)
+{
+  other.line = -1;
 }
 
 void MainWindow::Pump::start(bool scheduleOff, std::chrono::milliseconds duration)
@@ -238,8 +254,8 @@ void MainWindow::on__stopAllButton_clicked()
 void MainWindow::on__pourCustomDrinkButton_clicked()
 {
   pumps[0].dispense((float)ui->_pump1PourSpinbox->value());
-  pumps[1].dispense((float)ui->_pump1PourSpinbox->value());
-  pumps[2].dispense((float)ui->_pump1PourSpinbox->value());
+  pumps[1].dispense((float)ui->_pump2PourSpinbox->value());
+  pumps[2].dispense((float)ui->_pump3PourSpinbox->value());
   ui->_pourCustomDrinkButton->setEnabled(false);
 }
 

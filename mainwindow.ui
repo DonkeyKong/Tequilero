@@ -438,12 +438,17 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">.QMainWindow {
+   <string notr="true">.QLabel {
+   color: #FFFFFF;
+}
+
+.QMainWindow {
     background: #2b2b2b;
 }
 
 .QDoubleSpinBox {
     background: #2b2b2b;
+    color: #ffffff;
 }
 
 .QSlider::groove:horizontal {
@@ -4123,7 +4128,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="alignment">
@@ -4145,7 +4150,7 @@
       <double>0.100000000000000</double>
      </property>
      <property name="value">
-      <double>1.300000000000000</double>
+      <double>1.200000000000000</double>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">
@@ -4153,13 +4158,13 @@
       <rect>
        <x>20</x>
        <y>50</y>
-       <width>111</width>
+       <width>151</width>
        <height>21</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="text">
@@ -4174,13 +4179,13 @@
       <rect>
        <x>200</x>
        <y>50</y>
-       <width>121</width>
+       <width>151</width>
        <height>21</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="text">
@@ -4195,13 +4200,13 @@
       <rect>
        <x>380</x>
        <y>50</y>
-       <width>121</width>
+       <width>151</width>
        <height>21</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="text">
@@ -4222,7 +4227,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="alignment">
@@ -4244,7 +4249,7 @@
       <double>0.100000000000000</double>
      </property>
      <property name="value">
-      <double>1.300000000000000</double>
+      <double>1.200000000000000</double>
      </property>
     </widget>
     <widget class="QDoubleSpinBox" name="_pump1RateSpinbox">
@@ -4258,7 +4263,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="alignment">
@@ -4280,7 +4285,7 @@
       <double>0.100000000000000</double>
      </property>
      <property name="value">
-      <double>1.300000000000000</double>
+      <double>1.200000000000000</double>
      </property>
     </widget>
    </widget>
@@ -5214,7 +5219,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="alignment">
@@ -5250,7 +5255,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="alignment">
@@ -5286,7 +5291,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="alignment">
@@ -5768,7 +5773,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="text">
@@ -5789,7 +5794,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="text">
@@ -5810,7 +5815,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="text">
@@ -5826,7 +5831,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>331</width>
+      <width>551</width>
       <height>51</height>
      </rect>
     </property>
@@ -5968,6 +5973,15 @@
          </color>
         </brush>
        </colorrole>
+       <colorrole role="PlaceholderText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="128">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
       </active>
       <inactive>
        <colorrole role="WindowText">
@@ -6105,14 +6119,23 @@
          </color>
         </brush>
        </colorrole>
+       <colorrole role="PlaceholderText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="128">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
       </inactive>
       <disabled>
        <colorrole role="WindowText">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>0</blue>
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
@@ -6164,9 +6187,9 @@
        <colorrole role="Text">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>0</blue>
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
@@ -6182,9 +6205,9 @@
        <colorrole role="ButtonText">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>0</blue>
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
@@ -6242,13 +6265,22 @@
          </color>
         </brush>
        </colorrole>
+       <colorrole role="PlaceholderText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="128">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
       </disabled>
      </palette>
     </property>
     <property name="font">
      <font>
       <family>Helvetica Neue</family>
-      <pointsize>40</pointsize>
+      <pointsize>36</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -7159,7 +7191,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>22</pointsize>
+       <pointsize>20</pointsize>
        <bold>true</bold>
       </font>
      </property>
@@ -7181,7 +7213,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="text">
@@ -7202,7 +7234,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
        <bold>true</bold>
       </font>
      </property>
@@ -7224,7 +7256,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="text">

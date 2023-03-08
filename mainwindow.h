@@ -71,6 +71,8 @@ private:
     {
       Pump(Gpio& gpioDev, int gpioLine, QPushButton* startButton, QPushButton* stopButton, float flowRate);
       ~Pump();
+      Pump(const Pump&) = delete;
+      Pump(Pump&& other);
       void start(bool scheduleOff = false, std::chrono::milliseconds duration = std::chrono::milliseconds(0));
       void dispense(float milliliters);
       void stop();
